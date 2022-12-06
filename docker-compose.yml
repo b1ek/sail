@@ -3,3 +3,7 @@ services:
         build:
             context: .
             dockerfile: Dockerfile
+        volumes:
+            - './base:/var/www/html'
+        ports:
+            - '80:80'
