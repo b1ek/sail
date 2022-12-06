@@ -1,4 +1,4 @@
-<p align='center'><img width=500 src='https://blek.codes/logo.png' align='center'></img></p>
+<p align='center'><img width=500 src='logo.png' align='center'></img></p>
 
 <p align='center'>
     <img src='https://img.shields.io/docker/pulls/blekii/sail?style=plastic'></img>
