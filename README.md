@@ -7,7 +7,7 @@
 </p>
 
 ### blek! Sail
-blek! Sail is a production-ready alternative to <a href='https://github.com/laravel/sail'>Laravel Sail</a>, which runs on alpine instead of ubuntu and on nginx + php-fpm.
+blek!Sail is a production-ready alternative to <a href='https://github.com/laravel/sail'>Laravel Sail</a>, which runs on alpine instead of ubuntu and on nginx + php-fpm.
 
 ### Starting it up
 
