@@ -11,7 +11,7 @@ blek! Sail is a production-ready alternative to <a href='https://github.com/lara
 
 ### Starting it up
 
-### Via docker compsoe (recommended)
+### Via docker compose (recommended)
 ```
 
 services:
