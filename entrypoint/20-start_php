@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# start php
+log "Starting PHP..."
+
+php-fpm81 -D
+if [ $? == 0 ]; then
+    log "[  \033[36m\033[1mOK\033[0m  ] PHP started successfully"
+else
+    log "[ \033[31m\033[1mFAIL\033[0m ] Failed to start PHP"
+fi

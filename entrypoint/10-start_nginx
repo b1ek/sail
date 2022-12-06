@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# start nginx
+log Starting nginx...
+
+nginx
+if [ $? == 0 ]; then
+    log "[  \033[36m\033[1mOK\033[0m  ] nginx started successfully"
+else
+    log "[ \033[31m\033[1mFAIL\033[0m ] Failed to start nginx"
+fi

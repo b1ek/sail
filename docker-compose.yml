@@ -1,0 +1,5 @@
+services:
+    sail:
+        build:
+            context: .
+            dockerfile: Dockerfile
