@@ -22,6 +22,9 @@ RUN apk add --no-cache \
     php81 php81-fpm \
     php81-bcmath php81-ctype php81-curl php81-dom php81-fileinfo php81-json php81-mbstring \
     php81-openssl php81-pdo php81-tokenizer php81-xml php81-xmlwriter php81-session php81-pecl-imagick \
+    php81-mysqli php81-mysqlnd php81-pdo_mysql \
+    php81-pgsql php81-pdo_pgsql \
+    php81-sqlite3 php81-pdo_sqlite \
     composer
 
 # base laravel project
