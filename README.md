@@ -30,5 +30,5 @@ services:
 
 ### Via docker run
 ```
-$ docker run --name sail -p 80:80 -d blekii/sail:latest
+$ docker run -v '/path/to/laravel/project:/var/www/html' --name sail -p 80:80 -d blekii/sail:latest
 ```
