@@ -23,7 +23,7 @@ services:
             dockerfile: Dockerfile
 #        volumes:
 #            - 'your/project/root:/var/www/html'
-#            - 'custom/nginx/config:/etc/nginx'
+#            - 'custom/nginx/config:/etc/nginx/sites-enabled'
         ports:
             - '80:80'
 
