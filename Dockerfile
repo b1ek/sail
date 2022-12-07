@@ -26,7 +26,7 @@ RUN apk add --no-cache \
 
 # base laravel project
 COPY base /var/www/html
-RUN composer install
+RUN if [ -f 'composer.json' ]; then composer install; fi
 
 # configs
 COPY nginx.conf /etc/nginx
@@ -48,8 +48,7 @@ RUN \
 
 # give storage permissions to nginx
 RUN \
-    chown -R nobody:nobody storage && \
-    chmod -R 775 storage
+    if [ -d 'storage' ]; then chown -R nobody:nobody storage && chmod -R 775 storage; fi
 
 COPY docker-entrypoint.sh /
 COPY entrypoint /docker-entrypoint.d

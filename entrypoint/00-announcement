@@ -3,8 +3,8 @@
 log "Checking for announcement from blek.codes..."
 
 # get announcement
-echo "" | jq > /dev/null 2>&1
-if [ $? == 0 ]; then
+# echo "" | jq > /dev/null 2>&1
+if ! echo "" | jq > /dev/null 2>&1; then
     DATA=$(curl -s https://blek.codes/announce.json)
     if [[ $(echo "$DATA" | jq -r '.broadcast') == "true" ]]; then
         echo -e "Message from \033[36m\033[1mblek.codes\033[0m: $(echo $DATA | jq -r '.data.inline')";

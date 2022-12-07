@@ -2,13 +2,13 @@
 
 # logging
 log() {
-    echo -e "[$(date '+%Y-%m-%d %H:%M:%S') | \033[37m\033[1mINFO\033[0m  ] $@"
+    echo -e "[$(date '+%Y-%m-%d %H:%M:%S') | \033[37m\033[1mINFO\033[0m  ] $*"
 }
 warning() {
-    echo -e "[$(date '+%Y-%m-%d %H:%M:%S') | \033[33m\033[1mWARN\033[0m  ] $@"
+    echo -e "[$(date '+%Y-%m-%d %H:%M:%S') | \033[33m\033[1mWARN\033[0m  ] $*"
 }
 error() {
-    echo -e "[$(date '+%Y-%m-%d %H:%M:%S') | \033[31m\033[1mERROR\033[0m ] $@"
+    echo -e "[$(date '+%Y-%m-%d %H:%M:%S') | \033[31m\033[1mERROR\033[0m ] $*"
 }
 
 #               |    |    |
