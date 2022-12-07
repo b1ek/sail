@@ -21,7 +21,7 @@ RUN apk add --no-cache \
     nginx \
     php81 php81-fpm \
     php81-bcmath php81-ctype php81-curl php81-dom php81-fileinfo php81-json php81-mbstring \
-    php81-openssl php81-pdo php81-tokenizer php81-xml php81-xmlwriter php81-session \
+    php81-openssl php81-pdo php81-tokenizer php81-xml php81-xmlwriter php81-session php81-pecl-imagick \
     composer
 
 # base laravel project
