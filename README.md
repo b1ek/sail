@@ -4,6 +4,7 @@
     <img src='https://img.shields.io/docker/pulls/blekii/sail?style=plastic'></img>
     <img src='https://img.shields.io/docker/v/blekii/sail?style=plastic'></img>
     <img src='https://img.shields.io/badge/built%20with-%E2%9D%A4-ff005d?style=plastic'></img>
+    <img src='https://img.shields.io/github/last-commit/b1ek/sail?style=plastic'></img>
 </p>
 
 ### blek! Sail
