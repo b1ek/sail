@@ -53,3 +53,14 @@ find "/docker-entrypoint.d/" -follow -type f -print | sort -V | while read -r f;
         log "Ingoring $f, not executable"
     fi
 done
+
+log "Done loading startup scripts, entering standby mode"
+
+touch /var/log/stdout_log
+
+tail -n+1 -F /var/log/nginx/access.log | xargs -I {} echo -e "[$(date '+%Y-%m-%d %H:%M:%S') | \033[37m\033[1mINFO\033[0m  ] [\033[36m\033[1mN\033[0m] {}" & \
+tail -n+1 -F /var/log/nginx/error.log | xargs -I {} echo -e "[$(date '+%Y-%m-%d %H:%M:%S') | \033[31m\033[1mERROR\033[0m ] [\033[36m\033[1mN\033[0m] {}" & \
+tail -n+1 -F /var/log/stdout_log | xargs -I {} log "{}" &
+
+log "Executing startup command \"$@\""
+exec "$@" > /var/log/stdout_log 2>&1
