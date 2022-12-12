@@ -10,6 +10,8 @@
 ### blek! Sail
 blek! Sail is a production-ready alternative to <a href='https://github.com/laravel/sail'>Laravel Sail</a>, which runs on alpine instead of ubuntu and on nginx + php-fpm.
 
+Docker hub image: `blekii/sail` (<a href='https://hub.docker.com/r/blekii/sail'>link</a>)
+
 ### Starting it up
 
 ### Via docker compose (recommended)
