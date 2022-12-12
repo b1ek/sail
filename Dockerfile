@@ -26,7 +26,7 @@ RUN apk update && \
     php81-sqlite3 php81-pdo_sqlite \
     composer
 
-RUN if [ -f 'composer.json' ]; then composer install; fi
+RUN if [ -f 'composer.json' ]; then composer install --no-dev; fi
 RUN \
     sed -i '17ipid = /run/php/pid' /etc/php81/php-fpm.conf && \
     sed -i '37ilisten = /run/php/sock' /etc/php81/php-fpm.d/www.conf && \
