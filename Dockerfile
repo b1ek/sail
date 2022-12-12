@@ -8,7 +8,6 @@ WORKDIR /var/www/html
 COPY base /var/www/html
 COPY nginx.conf /etc/nginx
 
-# update
 RUN apk update && \
     \
     addgroup -g 101 -S nginx && \
