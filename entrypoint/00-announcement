@@ -1,17 +1,13 @@
-#!/bin/bash
+#!/bin/sh
 
-log "Checking for announcement from blek.codes..."
+if [ -z "${NO_ANNOUNCE}" ]; then
+	log "Checking for announcement from blek.codes..."
 
-# get announcement
-# echo "" | jq > /dev/null 2>&1
-if ! echo "" | jq > /dev/null 2>&1; then
-    DATA=$(curl -s https://blek.codes/announce.json)
-    if [[ $(echo "$DATA" | jq -r '.broadcast') == "true" ]]; then
-        echo -e "Message from \033[36m\033[1mblek.codes\033[0m: $(echo $DATA | jq -r '.data.inline')";
-        sleep 2
-    else
-        log "No message from blek.codes"
-    fi
-else
-    error "jq is not installed (potentially broken image)"
+	# get announcement
+	DATA=$(curl -s https://blek.codes/announce.json -m 1)
+	if [[ $(echo "$DATA" | jq -r '.broadcast') == "true" ]]; then
+		log "Message from \033[36m\033[1mblek.codes\033[0m: $(echo $DATA | jq -r '.data.inline')";
+	else
+		log "No message from blek.codes";
+	fi
 fi

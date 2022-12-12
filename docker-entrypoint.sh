@@ -62,5 +62,5 @@ tail -n+1 -F /var/log/nginx/access.log | xargs -I {} echo -e "[$(date '+%Y-%m-%d
 tail -n+1 -F /var/log/nginx/error.log | xargs -I {} echo -e "[$(date '+%Y-%m-%d %H:%M:%S') | \033[31m\033[1mERROR\033[0m ] [\033[36m\033[1mN\033[0m] {}" & \
 tail -n+1 -F /var/log/stdout_log | xargs -I {} log "{}" &
 
-log "Executing startup command \"$@\""
+log "Executing startup command \033[36m\033[1m$@\033[0m"
 exec "$@" > /var/log/stdout_log 2>&1
