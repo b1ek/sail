@@ -41,10 +41,6 @@ RUN \
     \
     if [ -d 'storage' ]; then chown -R nobody:nobody storage && chmod -R 775 storage; fi
 
-COPY docker-entrypoint.sh /
-COPY entrypoint /docker-entrypoint.d
-ENTRYPOINT ["/docker-entrypoint.sh"]
-
 EXPOSE 80
 
 STOPSIGNAL SIGQUIT
